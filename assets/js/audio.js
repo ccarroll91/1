@@ -1,4 +1,52 @@
-/*---------------------------------------------------audio*/
+const sounds = [
+  'audio1',
+  'audio2',
+  'audio3',
+  'audio4',
+  'audio5',
+  'audio6',
+  'audio7',
+  'audio8',
+  'audio9',
+  'audio10',
+  'audio11',
+  'audio12',
+  'audio13',
+  'audio14',
+  'audio15',
+  'audio16',
+  'audio17',
+  'audio18',
+  'audio19',
+  'audio20',
+  'audio21',
+  'audio22',
+  'audio23',
+  'audio24',
+  'audio25',
+  'audio26',
+  'audio27',
+]
+
+sounds.forEach((sound) => {
+  item.addEventListener('click'), ()=>{
+    stopSongs();
+    document.getElementById(sound).play();
+  }
+
+  function stopSongs() {
+    sounds.forEach((sound) => {
+      const song = document.getElementById(sound);
+
+      song.pause();
+      song.currentTime = 0;
+    });
+  }
+
+
+})
+
+/*---------------------------------------------------audio
 
 document.getElementById('play1').addEventListener('click', function (e) {
     e.preventDefault();
@@ -134,4 +182,4 @@ document.getElementById('play1').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('audio27').play();
   });
-  
+  */
