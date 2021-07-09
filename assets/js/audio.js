@@ -1,3 +1,8 @@
+function play(nr) {
+  var audio = document.getElementById("audio-"+nr);
+  audio.play(); }
+
+
 /*const sounds = [
   'audio1',
   'audio2',
@@ -27,7 +32,7 @@
   'audio26',
   'audio27',
 ]
-*/
+
 var audio = new Audio(),
     i = 0;
 var playlist = new Array('audio1',
@@ -68,7 +73,7 @@ audio.volume = 0.3;
 audio.loop = false;
 audio.src = playlist[0];
 audio.play();
-/*
+
 sounds.forEach((sound) => {
   const item;
   item.classList.add('item');
