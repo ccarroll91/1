@@ -28,17 +28,7 @@ const sounds = [
   'audio27',
 ]
 
-var x = document.getElementById("audio1");
-
-function playAudio() {
-  x.play();
-}
-
-function pauseAudio() {
-  x.pause();
-}
-
-/*---------------------------------------------------audio
+/*---------------------------------------------------audio*/
 
 document.getElementById('play1').addEventListener('click', function (e) {
     e.preventDefault();
@@ -174,4 +164,24 @@ document.getElementById('play1').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('audio27').play();
   });
-*/
+
+
+  
+  var isPlaying=false
+  $(document).ready(function(){
+      $("item").on("click", function(){
+          var audio = $(this).next().attr("src");
+          var music = new Audio(audio);
+          if (!isPlaying) {
+              // Not playing, let's play
+              isPlaying = true;
+              music.play();
+              
+          } else {
+              // Stop the music
+              isPlaying = true;
+              music.pause();
+              
+          };
+      });
+  });
