@@ -135,11 +135,3 @@ document.getElementById('play1').addEventListener('click', function (e) {
     document.getElementById('audio27').play();
   });
   
-  $("audio").removeAttr("controls").each(function(i, audioElement) {
-    var audio = $(this);
-    var that = this;
-    $("#doc").append($('<button>'+audio.attr("title")+'</button>')
-        .click(function() {
-            that.play();
-        ));
-});
