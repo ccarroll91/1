@@ -37,51 +37,61 @@ document.getElementById('play1').addEventListener('click', function (e) {
   
   document.getElementById('play2').addEventListener('click', function (e) {
     e.preventDefault();
+    document.getElementById('audio1').pause();
     document.getElementById('audio2').play();
   });
   
   document.getElementById('play3').addEventListener('click', function (e) {
     e.preventDefault();
+    document.getElementById('audio2').pause();
     document.getElementById('audio3').play();
   });
   
   document.getElementById('play4').addEventListener('click', function (e) {
     e.preventDefault();
+    document.getElementById('audio3').pause();
     document.getElementById('audio4').play();
   });
   
   document.getElementById('play5').addEventListener('click', function (e) {
     e.preventDefault();
+    document.getElementById('audio4').pause();
     document.getElementById('audio5').play();
   });
   
   document.getElementById('play6').addEventListener('click', function (e) {
     e.preventDefault();
+    document.getElementById('audio5').pause();
     document.getElementById('audio6').play();
   });
   
   document.getElementById('play7').addEventListener('click', function (e) {
     e.preventDefault();
+    document.getElementById('audio6').pause();
     document.getElementById('audio7').play();
   });
   
   document.getElementById('play8').addEventListener('click', function (e) {
     e.preventDefault();
+    document.getElementById('audio7').pause();
     document.getElementById('audio8').play();
   });
   
   document.getElementById('play9').addEventListener('click', function (e) {
     e.preventDefault();
+    document.getElementById('audio8').pause();
     document.getElementById('audio9').play();
   });
   
   document.getElementById('play10').addEventListener('click', function (e) {
     e.preventDefault();
+    document.getElementById('audio9').pause();
     document.getElementById('audio10').play();
   });
   
   document.getElementById('play11').addEventListener('click', function (e) {
     e.preventDefault();
+    document.getElementById('audio10').pause();
     document.getElementById('audio11').play();
   });
   
@@ -163,25 +173,4 @@ document.getElementById('play1').addEventListener('click', function (e) {
   document.getElementById('play27').addEventListener('click', function (e) {
     e.preventDefault();
     document.getElementById('audio27').play();
-  });
-
-
-  
-  var isPlaying=false
-  $(document).ready(function(){
-      $("item").on("click", function(){
-          var audio = $(this).next().attr("src");
-          var music = new Audio(audio);
-          if (!isPlaying) {
-              // Not playing, let's play
-              isPlaying = true;
-              music.play();
-              
-          } else {
-              // Stop the music
-              isPlaying = true;
-              music.pause();
-              
-          };
-      });
   });
