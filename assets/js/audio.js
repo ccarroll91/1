@@ -1,100 +1,3 @@
-function play(nr) {
-  var audio = document.getElementById("audio-"+nr);
-  audio.play(); }
-
-
-/*const sounds = [
-  'audio1',
-  'audio2',
-  'audio3',
-  'audio4',
-  'audio5',
-  'audio6',
-  'audio7',
-  'audio8',
-  'audio9',
-  'audio10',
-  'audio11',
-  'audio12',
-  'audio13',
-  'audio14',
-  'audio15',
-  'audio16',
-  'audio17',
-  'audio18',
-  'audio19',
-  'audio20',
-  'audio21',
-  'audio22',
-  'audio23',
-  'audio24',
-  'audio25',
-  'audio26',
-  'audio27',
-]
-
-var audio = new Audio(),
-    i = 0;
-var playlist = new Array('audio1',
-'audio2',
-'audio3',
-'audio4',
-'audio5',
-'audio6',
-'audio7',
-'audio8',
-'audio9',
-'audio10',
-'audio11',
-'audio12',
-'audio13',
-'audio14',
-'audio15',
-'audio16',
-'audio17',
-'audio18',
-'audio19',
-'audio20',
-'audio21',
-'audio22',
-'audio23',
-'audio24',
-'audio25',
-'audio26',
-'audio27');
-
-audio.addEventListener('ended', function () {
-    i = ++i < playlist.length ? i : 0;
-    console.log(i)
-    audio.src = playlist[i];
-    audio.play();
-}, true);
-audio.volume = 0.3;
-audio.loop = false;
-audio.src = playlist[0];
-audio.play();
-
-sounds.forEach((sound) => {
-  const item;
-  item.classList.add('item');
-
-  item.addEventListener('click'), ()=>{
-    stopSongs();
-    document.getElementById(sound).play();
-  }
-
-  function stopSongs() {
-    sounds.forEach((sound) => {
-      const song = document.getElementById(sound);
-
-      song.pause();
-      song.currentTime = 0;
-    });
-  }
-
-
-})
-*/
 /*---------------------------------------------------audio*/
 
 document.getElementById('play1').addEventListener('click', function (e) {
@@ -232,3 +135,8 @@ document.getElementById('play1').addEventListener('click', function (e) {
     document.getElementById('audio27').play();
   });
   
+  function playClip(){
+    if($('.item').eq(1).hasClass('active')){
+         $(this).next().get(0).play();
+    }
+}
