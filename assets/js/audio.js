@@ -135,4 +135,22 @@ document.getElementById('play1').addEventListener('click', function (e) {
     document.getElementById('audio27').play();
   });
   
-  
+  function play(e) {
+    var audio = document.getElementById('audio'+e);
+
+    var sounds = document.getElementsByTagName('audio');
+    var shouldPlay = true;
+    for(i=0; i<sounds.length; i++) {
+        if(sounds[i].currentTime > 0 && !sounds[i].paused && !sounds[i].ended) {
+            sounds[i].pause();
+            sounds[i].currentTime = 0;
+
+            if(audio == sounds[i]) shouldPlay = false;
+        }
+    }
+
+
+    if(shouldPlay) {
+        audio.play();
+    }
+}
