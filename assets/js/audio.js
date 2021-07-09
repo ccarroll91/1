@@ -29,6 +29,9 @@ const sounds = [
 ]
 
 sounds.forEach((sound) => {
+  const item;
+  item.classList.add('item');
+
   item.addEventListener('click'), ()=>{
     stopSongs();
     document.getElementById(sound).play();
